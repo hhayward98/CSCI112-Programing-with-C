@@ -61,8 +61,8 @@ int main(void) {
 		int largest = -1;
 		int l;
 		int total = 0;
-		double AVE;
-		int sumSqr;
+		double AVE = 0;
+		int sumSqr = 0;
 		for (l = 0; l < N; l++) {
 			int num = rand() % (upper) + 1;
 			total += num;
@@ -79,7 +79,7 @@ int main(void) {
 		}
 		// I could have just printed the value of the function but I felt more 
 		// confortable doing it this way
-		double STD;
+		double STD = 0;
 		STD = stdDev(AVE, sumSqr, N);
 		printf("The Standard Deveation is = %lf\n", STD);
 		printf("The smallest number is %d\n", smallest);
