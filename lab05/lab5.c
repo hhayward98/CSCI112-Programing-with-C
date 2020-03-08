@@ -129,7 +129,7 @@ int main(void){
 		
 							
 			printf("Do you want to decode another resistor?\n");
-
+			printf(" => ");
 			scanf(" %c", &choice);
 
 			switch(choice) {
