@@ -10,14 +10,20 @@ char substitution(char key[],char temp[]){
 
 	char ref[27] = "abcdefghijklmnopqrstuvwxyz";
 	int temp2;
-	//printf("%c\n", temp[0]);
+
 	
 	for (int i = 0; i < strlen(key); i++){
+		
 		if (temp[0] == key[i]){
-			printf("%c", key[i]);
-			return key[i];
 			
-			
+			temp2 = i;
+			// compair i to the index of ref and take the char from that.
+			for (int k = 0; k < strlen(ref); k++) {		
+				if (temp2 == k) {
+					
+					return ref[k];
+				}
+			}
 		
 		}
 
@@ -30,6 +36,7 @@ char substitution(char key[],char temp[]){
 }
 
 
+// need to add a function that will substitute out the upper case char
 
 int main(void) {
 
@@ -55,23 +62,28 @@ int main(void) {
 
 	// grabs the string and stores it in buffer
 	while(fgets(buffer, bufferLength, file_in)) {
-		fprintf(file_out, "%s\n", buffer);	
+		printf("%s\n", buffer);	
 		// grabs each char in buffer and copys it to temp.	
 		for (int i = 0; i < bufferLength; i++) {
 			strncpy(temp, &buffer[i], 1);
 			temp[1] = '\0';
-		//	printf("%s", temp);
-			if (temp[0] != ' '){
+			
+			// need to add one more if statement for upper case char
+			// and another one for special char
 
+			if (temp[0] != ' '){
+				// if the char in temp is not a space we will do the substitution 
+				// and add the char to the new string
 				temp_char[0] = substitution(key, temp);
 				strcat(newStr, &temp_char[0]);
 			}
+			// if the char in the string is a space then we will add a spce to the newstring
 			else {
 				strcat(newStr, " ");
 			}
 			
 		}
-		fprintf(file_out, "%s\n", newStr);
+		printf("%s\n", newStr);
 		printf("\n");
 		newStr[0] = '\0';
 	}
