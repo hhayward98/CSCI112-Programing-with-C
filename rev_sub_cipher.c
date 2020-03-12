@@ -12,16 +12,16 @@ char substitution(char key[],char temp[]){
 	int temp2;
 
 	
-	for (int i = 0; i < strlen(ref); i++){
+	for (int i = 0; i < strlen(key); i++){
 		
-		if (temp[0] == ref[i]){
+		if (temp[0] == key[i]){
 			
 			temp2 = i;
 			// compair i to the index of ref and take the char from that.
-			for (int k = 0; k < strlen(key); k++) {		
+			for (int k = 0; k < strlen(ref); k++) {		
 				if (temp2 == k) {
 					
-					return key[k];
+					return ref[k];
 				}
 			}
 		
