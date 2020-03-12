@@ -65,7 +65,7 @@ int main(void) {
 
 	// grabs the string and stores it in buffer
 	while(fgets(buffer, bufferLength, file_in)) {
-		printf("%s\n", buffer);	
+		fprintf(file_out, "%s\n", buffer);	
 		// grabs each char in buffer and copys it to temp.	
 		for (int i = 0; i < bufferLength; i++) {
 			strncpy(temp, &buffer[i], 1);
@@ -81,7 +81,7 @@ int main(void) {
 			}
 			
 		}
-		printf("%s\n", newStr);
+		fprintf(file_out, "%s\n", newStr);
 		printf("\n");
 		newStr[0] = '\0';
 	}
