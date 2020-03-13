@@ -69,8 +69,11 @@ int main(void) {
 			strncpy(temp, &buffer[i], 1);
 			temp[1] = '\0';
 			
-			// need to add one more if statement for upper case char
-			// and another one for special char
+			//stops the error of a extra char in encrypted message.
+			if (strlen(newStr) == strlen(buffer)) {
+				break;
+			}
+			
 			
 
 			if (temp[0] != ' '){
