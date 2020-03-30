@@ -1,0 +1,35 @@
+Machines green
+ and red
+ are on the same local network
+
+Machines blue
+ and yellow
+ are on the same local network
+
+Machines red
+ and green
+ are on the same local network
+
+Machines yellow
+ and blue
+ are on the same local network
+
+Machines cyan
+ and black
+ are on the same local network
+
+Machines purple
+ and white
+ are on the same local network
+
+Machines black
+ and cyan
+ are on the same local network
+
+Machines white
+ and purple
+ are on the same local network
+
+Machines none
+ are on the same local network
+
