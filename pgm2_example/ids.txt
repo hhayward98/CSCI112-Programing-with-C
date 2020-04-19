@@ -1,0 +1,7 @@
+Adams,Thomas,5
+Anderson,Don,6
+Andrews,Betty,4
+Armes,Abel,2
+Baker,John,3
+Ball,Carol,1
+Barker,Fred,7
