@@ -5,7 +5,7 @@
 
 
 void ListInsert(Node_t** head, Student_t* c112) {
-
+	// just inserts the struct into a list
 	Node_t* new_node = malloc(sizeof(Node_t));
 	new_node->c112 = c112;
 	new_node->next = NULL;

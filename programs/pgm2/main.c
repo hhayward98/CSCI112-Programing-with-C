@@ -22,14 +22,14 @@ int main(void) {
 	char buffer[bufferLength];
 	char grade[20];
 	char curve;
-//	Student_t* c112 = malloc(sizeof(Student_t));
 
+	
 
 	while(fgets(buffer, bufferLength, file_in)) {
 	
 		Student_t* c112 = malloc(sizeof(Student_t));
 		ReadGrades(c112, buffer);
-		
+		// inserts the struct into the LinkedList	
 		ListInsert(&LL_head, c112);
 
 
@@ -38,16 +38,17 @@ int main(void) {
 	Node_t* cur = LL_head;
 	while (cur != NULL) {
 		double Temp = cur->c112->Grade;
+		// curves the grade if it needs to be
 		if (Temp < round(Temp)) {
 			curve = 'Y';
 		}
 		else {
 			curve = 'N';
 		}
-
+		// calculates the Letter grade
 		*grade = CalculateLetterGrade(Temp);
 		
-
+		// prints the grades to a file.
 		PrintGrade(&cur, curve, grade, file_out);
 		cur = cur->next;
 	}
